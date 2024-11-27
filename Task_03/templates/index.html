@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Weather Application</h1>
+
+        <!-- Input for city names -->
+        <div class="form-group">
+            <label for="city-input">Enter city names (separated by commas):</label>
+            <input type="text" id="city-input" class="form-control" placeholder="e.g., London, Paris, New York">
+        </div>
+
+        <button id="fetch-weather" class="btn btn-primary btn-block">Get Weather</button>
+
+        <!-- Weather results display -->
+        <div id="weather-results" class="mt-4"></div>
+
+        <!-- Statistics display -->
+        <div id="statistics" class="mt-4" style="background-color: #f8f9fa; padding: 10px;"></div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
